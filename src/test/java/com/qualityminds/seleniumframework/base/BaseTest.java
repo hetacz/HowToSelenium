@@ -22,8 +22,6 @@ public abstract class BaseTest {
     @Parameters({BROWSER, HEADLESS})
     @BeforeMethod(description = "Start driver...", alwaysRun = true)
     public void startDriver(@Optional String browser, @Optional String headless) {
-        log.warn("Browser: {}", browser);
-        log.warn("Headless: {}", headless);
         driver.set(Boolean.parseBoolean(headless)
                 ? DriverManagerFactory.getManager(BrowserType.valueOf(browser)).createDriverHeadless()
                 : DriverManagerFactory.getManager(BrowserType.valueOf(browser)).createDriver());
