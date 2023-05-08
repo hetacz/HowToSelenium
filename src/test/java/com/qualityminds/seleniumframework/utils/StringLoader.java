@@ -25,7 +25,9 @@ public final class StringLoader {
         return strings.get(i18n.name().toLowerCase());
     }
 
-    private static final class Holder {
+
+    private enum Holder {
+        ;
 
         static final StringLoader INSTANCE; // non private for optimization
         private static final String ERR_MSG = "Error while reading json files.";

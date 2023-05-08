@@ -19,7 +19,7 @@ public class Parser {
     }
 
     private InputStreamReader reader(String fileName) {
-        return new InputStreamReader(Objects.requireNonNull(Upload.class
+        return new InputStreamReader(Objects.requireNonNull(Parser.class
                 .getClassLoader()
                 .getResourceAsStream(fileName)), StandardCharsets.UTF_8);
     }
