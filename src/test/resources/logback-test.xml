@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <conversionRule conversionWord="threadId" converterClass="com.qualityminds.seleniumframework.utils.ThreadIdConverter"/>
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd 'T' HH:mm:ss.SSSZ} [%threadId][%p] %c{-3}->%M %m%n%throwable"/>
+    <property name="APP_LOG_ROOT" value="./logs"/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="appLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${APP_LOG_ROOT}/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${APP_LOG_ROOT}/app-app-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>10</maxHistory>
+            <maxFileSize>10MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="io.github.bonigarcia" level="info">
+        <appender-ref ref="appLog" level="info"/>
+        <appender-ref ref="Console" level="warn"/>
+    </logger>
+    <logger name="com.qualityminds" level="trace">
+        <appender-ref ref="appLog" level="trace"/>
+        <appender-ref ref="Console" level="info"/>
+    </logger>
+    <root level="info" additivity="true">
+        <appender-ref ref="appLog" level="info"/>
+        <appender-ref ref="Console" level="info"/>
+    </root>
+</configuration>
