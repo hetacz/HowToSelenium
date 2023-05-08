@@ -6,7 +6,7 @@ import lombok.Getter;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
-public class HomePagePO extends BasePage implements LocaleLoadable<HomePagePO>, Localizable {
+public class HomePagePO extends BasePage implements LocaleLoadable<HomePagePO>, Loadable<HomePagePO>, Localizable {
 
     @Getter
     private final TopBarPO topBarPO;
@@ -14,6 +14,19 @@ public class HomePagePO extends BasePage implements LocaleLoadable<HomePagePO>, 
     public HomePagePO(WebDriver driver) {
         super(driver);
         this.topBarPO = new TopBarPO(driver);
+    }
+
+    @Override
+    public HomePagePO load() {
+        home();
+        waitForPageToLoad();
+        return this;
+    }
+
+    @Override
+    public HomePagePO waitForPageToLoad() {
+        waitForPageToLoad(I18n.ENGLISH);
+        return this;
     }
 
     @Override
