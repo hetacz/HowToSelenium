@@ -21,7 +21,7 @@ public class FirefoxDM implements DriverManager {
     public WebDriver createDriverHeadless() {
         WebDriverManager.firefoxdriver().cachePath(DriverManager.CACHE_PATH).setup();
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--window-size=1920,1080", "--headless");
+        options.addArguments("-headless", "-width 1920", "-height 1080");
         return new FirefoxDriver(options);
     }
 }
