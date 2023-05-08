@@ -29,6 +29,18 @@ public class TopBarPO extends BasePage {
         super(driver);
     }
 
+    public TopBarPO hoverOverLanguageDrop() {
+        hoverOver(languageDrop);
+        getVisibleElement(languageSubmenu);
+        return this;
+    }
+
+    public TopBarPO hoverOverPortfolioMenu() {
+        hoverOver(portfolioDrop);
+        getVisibleElement(portfolioSubmenu);
+        return this;
+    }
+
     public AutoTestPO clickAtAutomationTestsSubMenu() {
         throwIfNotVisible(atSubMenu);
         click(atSubMenu);
@@ -37,7 +49,7 @@ public class TopBarPO extends BasePage {
 
     public TopBarPO changeDefaultLanguage(I18n i18n) {
         if (i18n == I18n.ENGLISH) {
-            log.debug("Default language is English");
+            log.debug("The default language is English.");
             return this;
         }
         clickLanguageDrop(i18n);
@@ -50,19 +62,8 @@ public class TopBarPO extends BasePage {
     }
 
     private void clickLanguageDrop(I18n i18n) {
-        hoverOverLanguageDrop();
         throwIfNotVisible(selectDropdown(i18n));
         click(selectDropdown(i18n));
-    }
-
-    private void hoverOverLanguageDrop() {
-        hoverOver(languageDrop);
-        getVisibleElement(languageSubmenu);
-    }
-
-    private void hoverOverPortfolioMenu() {
-        hoverOver(portfolioDrop);
-        getVisibleElement(portfolioSubmenu);
     }
 
     private boolean isCurrentLanguageCorrect(I18n i18n) {
