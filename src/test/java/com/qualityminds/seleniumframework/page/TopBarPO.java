@@ -49,9 +49,9 @@ public class TopBarPO extends BasePage {
     public TopBarPO changeDefaultLanguage(I18n i18n) {
         if (i18n == I18n.ENGLISH) {
             log.debug("The default language is English.");
-            return this;
+        } else {
+            clickLanguageDrop(i18n);
         }
-        clickLanguageDrop(i18n);
         return this;
     }
 

@@ -3,7 +3,7 @@ package com.qualityminds.seleniumframework.page;
 import com.qualityminds.seleniumframework.base.I18n;
 import com.qualityminds.seleniumframework.utils.StringLoader;
 
-public interface Localizable {
+interface Localizable {
 
     String HOME_URL = "home_url";
     String HOME_TITLE = "home_title";
