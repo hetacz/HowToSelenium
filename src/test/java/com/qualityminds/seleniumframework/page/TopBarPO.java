@@ -13,14 +13,14 @@ public class TopBarPO extends BasePage {
 
 
     private static final String UL_LI = "ul#top-menu > li";
-    private static final String UL_LI_LAST = "ul#top-menu > li:last-child";
     private static final String UL_LI_A = " > ul.sub-menu > li > a[href='https://qualityminds.com%s']";
+    private static final String UL_LI_LAST = "//ul[@id='top-menu']/li[(contains(@class, 'menu-item'))][last()]";
     private final By portfolioDrop = By.cssSelector(UL_LI);
     private final By portfolioSubmenu = By.cssSelector(UL_LI + " > ul.sub-menu");
     private final By atSubMenu = By.cssSelector(UL_LI + " > ul.sub-menu > li > ul.sub-menu > li:nth-child(3)");
-    private final By languageDrop = By.cssSelector(UL_LI_LAST);
-    private final By languageSubmenu = By.cssSelector(UL_LI_LAST + " > ul.sub-menu");
-    private final By languageDropCurrentIcon = By.cssSelector(UL_LI_LAST + " > a > img");
+    private final By languageDrop = By.xpath(UL_LI_LAST);
+    private final By languageSubmenu = By.xpath(UL_LI_LAST + "/a/following-sibling::ul");
+    private final By languageDropCurrentIcon = By.xpath(UL_LI_LAST + "/a/img");
     private final By germanDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/de/"));
     private final By polishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/pl/"));
     private final By englishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted(""));

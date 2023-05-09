@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 
 public class AutoTestPO extends BasePage implements LocaleLoadable<AutoTestPO>, Localizable {
 
-    private static final String EMAIL = "testing@qualityminds.de";
     private final By h1 = By.cssSelector("h1 > span");
     private final By contactBtn = By.cssSelector("a.et_pb_button");
 
@@ -32,9 +31,9 @@ public class AutoTestPO extends BasePage implements LocaleLoadable<AutoTestPO>, 
         return this;
     }
 
-    public AutoTestPO verifyContactUsBtn() {
+    public AutoTestPO verifyContactUsBtn(I18n i18n) {
         scrollDown();
-        Assertions.assertThat(getVisibleElement(contactBtn).getAttribute("href")).contains(EMAIL);
+        Assertions.assertThat(getVisibleElement(contactBtn).getAttribute("href")).contains(getString(i18n, EMAIL));
         return this;
     }
 
