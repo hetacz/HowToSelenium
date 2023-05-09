@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default" verbose="1" thread-count="6" parallel="tests" group-by-instances="true">
+
+    <test name="Chrome" thread-count="3" parallel="methods" group-by-instances="true">
+        <parameter name="browser" value="CHROME"/>
+        <parameter name="headless" value="true"/>
+        <packages>
+            <package name="com.qualityminds.seleniumframework.tests"/>
+        </packages>
+    </test>
+
+    <test name="Firefox" thread-count="3" parallel="methods" group-by-instances="true">
+        <parameter name="browser" value="FIREFOX"/>
+        <parameter name="headless" value="true"/>
+        <packages>
+            <package name="com.qualityminds.seleniumframework.tests"/>
+        </packages>
+    </test>
+</suite>

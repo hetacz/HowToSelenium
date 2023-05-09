@@ -1,0 +1,26 @@
+{
+  "english": {
+    "home_url": "https://qualityminds.com",
+    "home_title": "QualityMinds | Homepage",
+    "automation_url": "/services/core-qa-services/test-automation/",
+    "automation_title": "QualityMinds | Test Automation",
+    "h1_text": "Test Automation",
+    "email": "testing@qualityminds.de"
+  },
+  "german": {
+    "home_url": "https://qualityminds.com/de/",
+    "home_title": "QualityMinds | Startseite",
+    "automation_url": "/de/portfolio/qa-kernkompetenzen/automatisiertes-testen/",
+    "automation_title": "QualityMinds | Automatisiertes Testen",
+    "h1_text": "Automatisiertes Testen",
+    "email": "testing@qualityminds.de"
+  },
+  "polish": {
+    "home_url": "https://qualityminds.com/pl/",
+    "home_title": "QualityMinds | Strona główna",
+    "automation_url": "pl/uslugi/glowne-uslugi-qa/automatyzacja-testowania/",
+    "automation_title": "QualityMinds | Automatyzacja testowania",
+    "h1_text": "Automatyzacja testowania",
+    "email": "hello@qualityminds.pl"
+  }
+}
