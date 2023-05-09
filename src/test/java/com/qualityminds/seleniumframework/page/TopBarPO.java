@@ -21,8 +21,8 @@ public class TopBarPO extends BasePage {
     private final By languageDrop = By.cssSelector(UL_LI_LAST);
     private final By languageSubmenu = By.cssSelector(UL_LI_LAST + " > ul.sub-menu");
     private final By languageDropCurrentIcon = By.cssSelector(UL_LI_LAST + " > a > img");
-    private final By germanDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/de"));
-    private final By polishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/pl"));
+    private final By germanDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/de/"));
+    private final By polishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/pl/"));
     private final By englishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted(""));
 
     protected TopBarPO(WebDriver driver) {

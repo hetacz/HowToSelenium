@@ -25,8 +25,8 @@ public class AutoTestPO extends BasePage implements LocaleLoadable<AutoTestPO>, 
 
     @Override
     public AutoTestPO waitForPageToLoad(I18n i18n) {
-        load(getString(i18n, AUTOMATION_TITLE));
-        load(getString(i18n, AUTOMATION_URL));
+        waitForPageTitle(getString(i18n, AUTOMATION_TITLE));
+        waitForPageUrl(getString(i18n, AUTOMATION_URL));
         verifyH1Text(i18n);
         logPageLoaded();
         return this;
