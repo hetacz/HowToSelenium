@@ -41,7 +41,7 @@ dependencies {
 
 tasks.test {
     useTestNG {
-        suites(System.getProperty("suiteFile", "testng.xml") ?: "testng.xml")
+        suites("testng/" + (System.getProperty("suiteFile", "testng.xml") ?: "testng.xml"))
     }
 
     systemProperties = System.getProperties().map { e -> Pair(e.key as String, e.value) }.toMap()
