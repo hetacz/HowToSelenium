@@ -27,4 +27,4 @@ If using different suite file, it has to be selected manually or passed as a CLI
 
 - **testng/testng.xml** – default  
   By default, suite files are looked for in the `testng` directory.  
-  `-DsuiteFile='file1.xml`
+  `-DsuiteFile='file1.xml'`
