@@ -28,7 +28,6 @@ public abstract class BaseTest {
         log.debug("Driver started.");
     }
 
-    @Parameters(BROWSER)
     @AfterMethod(description = "Stop driver.", alwaysRun = true)
     public void stopDriver() {
         driver().quit();
