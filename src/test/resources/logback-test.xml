@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <conversionRule conversionWord="threadId" converterClass="com.qualityminds.seleniumframework.utils.ThreadIdConverter"/>
+    <conversionRule conversionWord="threadId"
+                    converterClass="com.qualityminds.seleniumframework.utils.ThreadIdConverter"/>
     <property name="LOG_PATTERN" value="%d{yyyy-MM-dd 'T' HH:mm:ss.SSSZ} [%threadId][%p] %c{-3}->%M %m%n%throwable"/>
     <property name="APP_LOG_ROOT" value="./logs"/>
 
@@ -30,12 +31,8 @@
         <appender-ref ref="appLog" level="info"/>
         <appender-ref ref="Console" level="warn"/>
     </logger>
-    <logger name="com.qualityminds" level="trace">
-        <appender-ref ref="appLog" level="trace"/>
-        <appender-ref ref="Console" level="info"/>
-    </logger>
     <root level="info" additivity="true">
-        <appender-ref ref="appLog" level="info"/>
-        <appender-ref ref="Console" level="info"/>
+        <appender-ref ref="appLog" level="trace"/>
+        <appender-ref ref="Console" level="warn"/>
     </root>
 </configuration>
