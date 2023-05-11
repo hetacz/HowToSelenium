@@ -9,7 +9,7 @@ public interface Localizable {
     String HOME_TITLE = "home_title";
     String AUTOMATION_URL = "automation_url";
     String AUTOMATION_TITLE = "automation_title";
-    String H1_TEXT = "h1text";
+    String H1_TEXT = "h1_text";
     String EMAIL = "email";
 
     default String getString(I18n i18n, String key) {
