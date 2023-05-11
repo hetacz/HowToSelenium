@@ -3,7 +3,6 @@ package com.qualityminds.seleniumframework.page;
 import com.qualityminds.seleniumframework.base.BasePage;
 import com.qualityminds.seleniumframework.base.I18n;
 import lombok.Getter;
-import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
 public class HomePagePO extends BasePage implements LocaleLoadable<HomePagePO>, Loadable<HomePagePO>, Localizable {
@@ -46,13 +45,6 @@ public class HomePagePO extends BasePage implements LocaleLoadable<HomePagePO>, 
 
     public HomePagePO closeCookies() {
         acceptCookies();
-        return this;
-    }
-
-    public HomePagePO verifyUrl(I18n i18n) {
-        Assertions
-                .assertThat(driver.getCurrentUrl())
-                .isEqualTo(getString(i18n, HOME_URL));
         return this;
     }
 }
