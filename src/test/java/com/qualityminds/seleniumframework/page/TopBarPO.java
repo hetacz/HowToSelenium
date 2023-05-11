@@ -21,9 +21,6 @@ public class TopBarPO extends BasePage {
     private final By languageDrop = By.xpath(UL_LI_LAST);
     private final By languageSubmenu = By.xpath(UL_LI_LAST + "/a/following-sibling::ul");
     private final By languageDropCurrentIcon = By.xpath(UL_LI_LAST + "/a/img");
-    private final By germanDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/de/"));
-    private final By polishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted("/pl/"));
-    private final By englishDrop = By.cssSelector(UL_LI + UL_LI_A.formatted(""));
 
     protected TopBarPO(WebDriver driver) {
         super(driver);
@@ -71,11 +68,7 @@ public class TopBarPO extends BasePage {
     }
 
     private By selectDropdown(I18n i18n) {
-        return switch (i18n) {
-            case ENGLISH -> englishDrop;
-            case GERMAN -> germanDrop;
-            case POLISH -> polishDrop;
-        };
+        return By.cssSelector(UL_LI + UL_LI_A.formatted(i18n.getUrl()));
     }
 
     private void throwIfNotVisible(By locator) {
