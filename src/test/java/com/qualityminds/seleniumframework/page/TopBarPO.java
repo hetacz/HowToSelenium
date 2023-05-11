@@ -68,7 +68,7 @@ public class TopBarPO extends BasePage {
     }
 
     private By selectDropdown(I18n i18n) {
-        return By.cssSelector(UL_LI + UL_LI_A.formatted(i18n.getUrl()));
+        return By.cssSelector(UL_LI + UL_LI_A.formatted(i18n.getHref()));
     }
 
     private void throwIfNotVisible(By locator) {

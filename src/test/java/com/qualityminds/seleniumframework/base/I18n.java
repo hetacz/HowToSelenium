@@ -7,10 +7,11 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum I18n {
 
-    ENGLISH("en", "/"),
-    GERMAN("de", "/de"),
-    POLISH("pl", "/pl");
+    ENGLISH("en", "/", ""),
+    GERMAN("de", "/de", "/de/"),
+    POLISH("pl", "/pl", "/pl/");
 
     private final String abbr;
     private final String url;
+    private final String href;
 }
