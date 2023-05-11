@@ -1,0 +1,1 @@
+pwsh.exe -executionpolicy remotesigned -File  "C:\Users\Hetacz\Desktop\browserkill.ps1"
