@@ -3,6 +3,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     id("java")
+    id("io.freefair.lombok") version "8.3"
 }
 
 group = "com.qualityminds"
@@ -18,25 +19,21 @@ tasks.withType<JavaCompile> {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    testImplementation("org.seleniumhq.selenium:selenium-java:4.9.0")
+    testImplementation("org.seleniumhq.selenium:selenium-java:4.11.0")
     // https://mvnrepository.com/artifact/org.testng/testng
-    testImplementation("org.testng:testng:7.7.1")
+    testImplementation("org.testng:testng:7.8.0")
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.3.2")
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.5.2")
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.24.2")
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     testImplementation("org.slf4j:slf4j-api:2.0.7")
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
-    testImplementation("ch.qos.logback:logback-classic:1.4.7")
+    testImplementation("ch.qos.logback:logback-classic:1.4.11")
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-core
-    testImplementation("ch.qos.logback:logback-core:1.4.7")
+    testImplementation("ch.qos.logback:logback-core:1.4.11")
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
-
-    // https://mvnrepository.com/artifact/org.projectlombok/lombok
-    testCompileOnly("org.projectlombok:lombok:1.18.26")
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.26")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
 }
 
 tasks.test {
