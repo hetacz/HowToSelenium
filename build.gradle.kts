@@ -19,15 +19,15 @@ tasks.withType<JavaCompile> {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    testImplementation("org.seleniumhq.selenium:selenium-java:4.11.0")
+    testImplementation("org.seleniumhq.selenium:selenium-java:4.13.0")
     // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation("org.testng:testng:7.8.0")
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.5.2")
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.5.3")
     // https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.24.2")
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    testImplementation("org.slf4j:slf4j-api:2.0.7")
+    testImplementation("org.slf4j:slf4j-api:2.0.9")
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     testImplementation("ch.qos.logback:logback-classic:1.4.11")
     // https://mvnrepository.com/artifact/ch.qos.logback/logback-core
