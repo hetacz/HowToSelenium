@@ -14,7 +14,7 @@ public class TopBarPO extends BasePage {
 
     private static final String UL_LI = "ul#top-menu > li";
     private static final String UL_LI_A = " > ul.sub-menu > li > a[href*='qualityminds.com%s']";
-    private static final String UL_LI_LAST = "//ul[@id='top-menu']/li[(contains(@class, 'menu-item'))][last()]";
+    private static final String UL_LI_LAST = "//ul[@id='menu-main-menu']/li[(contains(@class, 'menu-item'))][last()]";
     private final By portfolioDrop = By.cssSelector(UL_LI);
     private final By portfolioSubmenu = By.cssSelector(UL_LI + " > ul.sub-menu");
     private final By atSubMenu = By.cssSelector(UL_LI + " > ul.sub-menu > li > ul.sub-menu > li:nth-child(3)");
