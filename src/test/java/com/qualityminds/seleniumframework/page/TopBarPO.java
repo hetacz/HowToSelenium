@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 public class TopBarPO extends BasePage {
 
 
-    private static final String UL_LI = "ul#top-menu > li";
+    private static final String UL_LI = "ul#menu-main-menu > li";
     private static final String UL_LI_A = " > ul.sub-menu > li > a[href*='qualityminds.com%s']";
     private static final String UL_LI_LAST = "//ul[@id='menu-main-menu']/li[(contains(@class, 'menu-item'))][last()]";
     private final By portfolioDrop = By.cssSelector(UL_LI);
